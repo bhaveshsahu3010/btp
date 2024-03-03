@@ -11,6 +11,29 @@
 }
 
 .Db{
+  padding: 20px;
   margin-top: 100px;
 }
 
+.dash1{
+  display: flex;
+  gap: 20px;
+}
+
+.text1{
+text-decoration: none;
+color: yellow;
+}
+.text2{
+text-decoration: none;
+color: yellow;
+}
+
+.upload_project{
+  padding: 30px;
+  background: linear-gradient(blue, pink);
+}
+.see_student_list{
+  padding: 30px;
+  background: linear-gradient(blue, 10%, pink);
+}
