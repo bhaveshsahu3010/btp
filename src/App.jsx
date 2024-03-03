@@ -4,10 +4,15 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Dashboard1 from './components/Dashboard1';
+import Dashboard2 from './components/Dashboard2';
 import Department from './Pages/Department';
 import Pagination from './Pages/Pagination';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import UploadProject from './Pages/UploadProject';
+import StudentList from './Pages/StudentList';
+import Preferences from './Pages/Preferences';
+import ProjectList from './Pages/ProjectList';
 
 function App() {
   return (
@@ -16,7 +21,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/dashboard/faculty' element={<Dashboard1 />} />
-          <Route path='/dashboard/student' element={<h1>Dashboard</h1>} />
+          <Route path='/uploadProject' element={<UploadProject />} />
+          <Route path='/studentList' element={<StudentList />} />
+          <Route path='/projectList' element={<ProjectList />} />
+          <Route path='/preferences' element={<Preferences />} />
+          <Route path='/dashboard/student' element={<Dashboard2 />} />
           <Route path="/" element={<Hero />} />
           <Route path="/dept" element={<Department />} />
           <Route path="/project" element={<Pagination />} />
