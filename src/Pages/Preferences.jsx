@@ -1,16 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Select from 'react-select';
 import './pref.css'
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-const options = [
+let options = [
     { value: 'PID1', label: 'Project1' },
     { value: 'PID2', label: 'Project2' },
     { value: 'PID3', label: 'Project3' },
 ];
 
-
 export default function Preferences() {
+
+  // const [Data,setData] = useState([])
+  let Data;
+  // let options;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/api/projects/getProjects');
+        Data = response.data.data
+        options[0].label = Data[0].pname
+        options[1].label = Data[1].pname
+        options[2].label = Data[2].pname
+        options[3].label = Data[3].pname
+        options[4].label = Data[4].pname
+        // console.log(options)
+      } catch (error) {
+        console.log(error)
+      }
+    };
+    fetchData(); // Call the function to fetch data
+  }, [Data,options]);
+
+
     const [preferences,setPreferences] = useState([]) 
     const [selectedOption, setSelectedOption] = useState(null);
     const navigate = useNavigate()
@@ -46,6 +70,7 @@ export default function Preferences() {
             />
         </div>
         <button type='submit' onClick={handleSubmit}>Submit</button>
+        {/* console.log(options) */}
         </div>
     );
 }
