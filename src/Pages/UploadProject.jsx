@@ -10,7 +10,7 @@ function UploadProject() {
     const navigate = useNavigate()
 
     const handleSubmit = ()=>{
-        navigate('/dashboard/faculty')
+        navigate('/faculty/dashboard')
     }
     return (
         <div className='upload Db'>
