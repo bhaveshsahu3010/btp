@@ -66,3 +66,14 @@ color: yellow;
 .custom-table th {
   background-color: #f2f2f2;
 }
+
+.upload-cont{
+  display: flex;
+  /* justify-content: center; */
+  gap: 10px;
+}
+
+.desc{
+  height: 100px;
+  width: 200px;
+}

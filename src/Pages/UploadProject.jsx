@@ -14,15 +14,15 @@ function UploadProject() {
     }
     return (
         <div className='upload Db'>
-            <div>
+            <div className='upload-cont'>
                 <span className='sp'>Enter Project Name:</span>
                 <input type="text" value={ProjectName} onChange={(e) => setProjectName(e.target.value)} placeholder='Type Project Name' />
             </div>
-            <div>
+            <div className='upload-cont'>
             <span className='sp'>Enter Project Description:</span>
-                <textarea value={ProjectDesc} onChange={(e) => setProjectDesc(e.target.value)} placeholder='Type Project Description'x />
+                <textarea value={ProjectDesc} onChange={(e) => setProjectDesc(e.target.value)} placeholder='Type Project Description' className='desc' />
             </div>
-            <div>
+            <div className='upload-cont'>
             <span className='sp'>Enter Project Strength:</span>
                 <input type="text" value={ProjectStrength} onChange={(e) => setProjectStrength(e.target.value)} placeholder='0' />
             </div>

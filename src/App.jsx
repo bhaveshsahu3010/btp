@@ -20,12 +20,12 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/dashboard/faculty' element={<Dashboard1 />} />
-          <Route path='/uploadProject' element={<UploadProject />} />
-          <Route path='/studentList' element={<StudentList />} />
-          <Route path='/projectList' element={<ProjectList />} />
-          <Route path='/preferences' element={<Preferences />} />
-          <Route path='/dashboard/student' element={<Dashboard2 />} />
+          <Route path='/faculty/dashboard' element={<Dashboard1 />} />
+          <Route path='/faculty/uploadProject' element={<UploadProject />} />
+          <Route path='/faculty/studentList' element={<StudentList />} />
+          <Route path='/student/projectList' element={<ProjectList />} />
+          <Route path='/student/preferences' element={<Preferences />} />
+          <Route path='/student/dashboard' element={<Dashboard2 />} />
           <Route path="/" element={<Hero />} />
           <Route path="/dept" element={<Department />} />
           <Route path="/project" element={<Pagination />} />
