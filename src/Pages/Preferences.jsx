@@ -21,6 +21,10 @@ export default function Preferences() {
       try {
         const response = await axios.get('http://localhost:4000/api/projects/getProjects');
         Data = response.data.data
+        for (let i = 0; i < Data.length; i++) {
+          options[i].label = Data[i].pname
+          
+        }
         options[0].label = Data[0].pname
         options[1].label = Data[1].pname
         options[2].label = Data[2].pname
