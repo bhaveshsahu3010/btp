@@ -16,7 +16,7 @@ function UploadProject() {
         <div className='upload Db'>
             <div className='upload-cont'>
                 <span className='sp'>Enter Project Name:</span>
-                <input type="text" value={ProjectName} onChange={(e) => setProjectName(e.target.value)} placeholder='Type Project Name' />
+                <input className='pname' type="text" value={ProjectName} onChange={(e) => setProjectName(e.target.value)} placeholder='Type Project Name' />
             </div>
             <div className='upload-cont'>
             <span className='sp'>Enter Project Description:</span>
@@ -24,7 +24,7 @@ function UploadProject() {
             </div>
             <div className='upload-cont'>
             <span className='sp'>Enter Project Strength:</span>
-                <input type="text" value={ProjectStrength} onChange={(e) => setProjectStrength(e.target.value)} placeholder='0' />
+                <input className='pstrength' type="text" value={ProjectStrength} onChange={(e) => setProjectStrength(e.target.value)} placeholder='0' />
             </div>
 
             <button type='submit' onClick={handleSubmit}>Submit</button>
