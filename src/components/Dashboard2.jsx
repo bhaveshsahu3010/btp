@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 function Dashboard1() {
     return (
         <div className='Db'>
-            <h1>Hi User</h1>
+            <h1>Hi User(Student)</h1>
+            <br />
             <div className='dash1'>
 
                 <Link to="/student/preferences" className='text1'>
