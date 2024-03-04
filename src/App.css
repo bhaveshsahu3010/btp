@@ -37,3 +37,43 @@ color: yellow;
   padding: 30px;
   background: linear-gradient(blue, 10%, pink);
 }
+
+.upload{
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  padding-left: 35%;
+  padding-top: 5%;
+  gap: 25px;
+}
+
+.sp{
+  padding-right: 15px;
+
+}
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
+}
+
+.upload-cont{
+  display: flex;
+  /* justify-content: center; */
+  gap: 10px;
+}
+
+.desc{
+  height: 100px;
+  width: 200px;
+}

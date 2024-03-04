@@ -7,14 +7,14 @@ function Dashboard1() {
             <h1>Hi User</h1>
             <div className='dash1'>
 
-                <Link to="/faculty/uploadProject" className='text1'>
+                <Link to="/student/preferences" className='text1'>
                     <div className='upload_project'>
-                        Upload A new project
+                        Preferences
                     </div>
                 </Link>
-                <Link to="/faculty/studentList" className='text2'>
+                <Link to="/student/projectList" className='text2'>
                     <div className='see_student_list'>
-                        Student List
+                        Project List
 
                     </div>
                 </Link>

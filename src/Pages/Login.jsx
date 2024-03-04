@@ -37,8 +37,8 @@ export default function Login() {
         password:password
       })
       .then(function (response) {
-        // navigate("/dashboard/faculty")
         toast.success("Login succesfully");
+        navigate("/faculty/dashboard")
         console.log(response);
       })
       .catch(function (error) {
@@ -52,7 +52,7 @@ export default function Login() {
       })
       .then(function (response) {
         toast.success("Login succesfully");
-        navigate("/dashboard/student")
+        navigate("/student/dashboard")
         console.log(response);
       })
       .catch(function (error) {
