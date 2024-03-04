@@ -40,7 +40,7 @@ export default function Preferences() {
     const navigate = useNavigate()
 
     const handleSubmit = () =>{
-        navigate('/dashboard/student')
+        navigate('/student/dashboard')
     }
 
     return (
