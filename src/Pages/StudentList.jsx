@@ -3,6 +3,8 @@ import React from 'react'
 function StudentList() {
   return (
     <div className='Db custom-table'>
+      <h1>Student List</h1>
+      <br />
       <table>
         <thead>
           <tr>
