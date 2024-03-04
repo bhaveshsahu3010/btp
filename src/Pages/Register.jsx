@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css'; // Import CSS for styling
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -8,6 +8,7 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isProfessor, setIsProfessor] = useState(false);
+  const navigate = useNavigate()
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -22,9 +23,40 @@ export default function Register() {
   };
 
   const handleSubmit = (e) => {
+    if(isProfessor){
+      axios.post('http://localhost:4000/api/auth/registerProfessor', {
+        email:email,
+        name:'professor',
+        password:password
+      })
+      .then(function (response) {
+        navigate("/dashboard/faculty")
+        toast.success("Login succesfully");
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    else{
+      axios.post('http://localhost:4000/api/auth/registerStudent', {
+        email:email,
+        sname:'Rahul',
+        spassword:password
+      })
+      .then(function (response) {
+        toast.success("Login succesfully");
+        setTimeout(()=>3000)
+        navigate("/dashboard/student")
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
     e.preventDefault();
     // Handle form submission here
-    toast.success("Register succesfully");
+    // toast.success("Register succesfully");
 
   };
 
